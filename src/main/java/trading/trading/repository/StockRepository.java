@@ -7,8 +7,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface StockRepository {
-    Stock save(Stock member);
+    Stock save(Stock stock);
     Optional<Stock> findById(Long id);
     Optional<Stock> findByName(String name);
     List<Stock> findAll();
+
 }

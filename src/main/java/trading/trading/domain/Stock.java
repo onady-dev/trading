@@ -4,15 +4,37 @@ public class Stock {
 
     private Long id;
     private String name;
-    private int last;
-    private int high;
-    private int low;
-    private int pc;
-    private float pcp;
-    private int turnover;
+    private String last;
+    private String high;
+    private String low;
+    private String pc;
+    private String pcp;
+    private String turnover;
     private String time;
 
     // 단축키 : 커맨드+n
+
+    public Stock(String name, String last, String high, String low, String pc, String pcp, String turnover, String time) {
+        this.name = name;
+        this.last = last;
+        this.high = high;
+        this.low = low;
+        this.pc = pc;
+        this.pcp = pcp;
+        this.turnover = turnover;
+        this.time = time;
+    }
+
+    public String toString(){
+        return "name : "+ name +
+                ", last : " + last +
+                ", high : " + high +
+                ", low : " + low +
+                ", pc : " + pc +
+                ", pcp : " + pcp +
+                ", turnover : " + turnover +
+                ", time : " + time;
+    }
 
     public Long getId() {
         return id;
@@ -30,51 +52,51 @@ public class Stock {
         this.name = name;
     }
 
-    public int getLast() {
+    public String getLast() {
         return last;
     }
 
-    public void setLast(int last) {
+    public void setLast(String last) {
         this.last = last;
     }
 
-    public int getHigh() {
+    public String getHigh() {
         return high;
     }
 
-    public void setHigh(int high) {
+    public void setHigh(String high) {
         this.high = high;
     }
 
-    public int getLow() {
+    public String getLow() {
         return low;
     }
 
-    public void setLow(int low) {
+    public void setLow(String low) {
         this.low = low;
     }
 
-    public int getPc() {
+    public String getPc() {
         return pc;
     }
 
-    public void setPc(int pc) {
+    public void setPc(String pc) {
         this.pc = pc;
     }
 
-    public float getPcp() {
+    public String getPcp() {
         return pcp;
     }
 
-    public void setPcp(float pcp) {
+    public void setPcp(String pcp) {
         this.pcp = pcp;
     }
 
-    public int getTurnover() {
+    public String getTurnover() {
         return turnover;
     }
 
-    public void setTurnover(int turnover) {
+    public void setTurnover(String turnover) {
         this.turnover = turnover;
     }
 

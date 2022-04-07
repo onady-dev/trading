@@ -7,7 +7,7 @@ import java.util.*;
 public class MemoryStockRepository implements StockRepository {
 
     private static Map<Long, Stock> store = new HashMap<>();
-    private  static Long sequence = 0L;
+    private static Long sequence = 0L;
 
     @Override
     public Stock save(Stock stock) {
