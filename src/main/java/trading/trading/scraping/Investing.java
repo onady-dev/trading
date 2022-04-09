@@ -19,7 +19,7 @@ public class Investing {
         try {
             doc = Jsoup.connect(URL).get();
             Elements elememts = doc.select("#cross_rate_markets_stocks_1 > tbody > tr");
-            for(Element e: elememts){
+            for (Element e : elememts) {
                 String name = e.text().split(" ")[0];
                 String last = e.text().split(" ")[1];
                 String high = e.text().split(" ")[2];
@@ -32,13 +32,12 @@ public class Investing {
                 Stock stock = new Stock(name, last, high, low, pc, pcp, turnover, time);
                 repository.save(stock);
             }
-
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
-        for(Stock s:repository.findAll()){
+        for (Stock s : repository.findAll()) {
             System.out.println(s.toString());
         }
     }
