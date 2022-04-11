@@ -15,9 +15,4 @@ public class StockController {
         this.stockService = stockService;
     }
 
-    @GetMapping("/")
-    public String home() {
-        return "home";
-    }
-
 }
