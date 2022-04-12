@@ -15,4 +15,9 @@ public class StockController {
         this.stockService = stockService;
     }
 
+    @GetMapping("/stocks/new")
+    public String createForm() {
+        return "stocks/createStock";
+    }
+
 }
