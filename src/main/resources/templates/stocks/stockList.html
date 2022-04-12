@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+                <th>현재가</th>
+                <th>고가</th>
+                <th>저가</th>
+                <th>변동</th>
+                <th>변동%</th>
+                <th>거래량</th>
+                <th>시간</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="stock : ${stocks}">
+                <td th:text="${stock.id}"></td>
+                <td th:text="${stock.name}"></td>
+                <td th:text="${stock.last}"></td>
+                <td th:text="${stock.high}"></td>
+                <td th:text="${stock.low}"></td>
+                <td th:text="${stock.pc}"></td>
+                <td th:text="${stock.pcp}"></td>
+                <td th:text="${stock.turnover}"></td>
+                <td th:text="${stock.time}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>
