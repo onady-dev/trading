@@ -2,17 +2,24 @@ package trading.trading.repository;
 
 import trading.trading.domain.Stock;
 
+import javax.sql.DataSource;
 import java.util.List;
 import java.util.Optional;
 
-public class jdbcStockRepository implements StockRepository{
+public class JdbcStockRepository implements StockRepository{
+
+
+    public JdbcStockRepository(DataSource dataSource) {
+
+    }
+
     @Override
     public Stock save(Stock stock) {
         return null;
     }
 
     @Override
-    public Optional<Stock> findById(Long id) {
+    public Optional<Stock> findById(String id) {
         return Optional.empty();
     }
 

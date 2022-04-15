@@ -49,7 +49,7 @@ public class StockController {
                 String turnover = e.text().split(" ")[6];
                 String time = e.text().split(" ")[7];
 
-                Stock stock = new Stock(name, last, high, low, pc, pcp, turnover, time);
+                Stock stock = new Stock();
                 repository.save(stock);
             }
         } catch (IOException e) {

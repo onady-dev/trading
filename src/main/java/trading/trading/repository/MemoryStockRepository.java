@@ -17,7 +17,7 @@ public class MemoryStockRepository implements StockRepository {
     }
 
     @Override
-    public Optional<Stock> findById(Long id) {
+    public Optional<Stock> findById(String id) {
         return Optional.ofNullable(store.get(id));
     }
 

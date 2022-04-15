@@ -14,16 +14,16 @@ public class Stock {
 
     // 단축키 : 커맨드+n
 
-    public Stock(String name, String last, String high, String low, String pc, String pcp, String turnover, String time) {
-        this.name = name;
-        this.last = last;
-        this.high = high;
-        this.low = low;
-        this.pc = pc;
-        this.pcp = pcp;
-        this.turnover = turnover;
-        this.time = time;
-    }
+//    public Stock(String name, String last, String high, String low, String pc, String pcp, String turnover, String time) {
+//        this.name = name;
+//        this.last = last;
+//        this.high = high;
+//        this.low = low;
+//        this.pc = pc;
+//        this.pcp = pcp;
+//        this.turnover = turnover;
+//        this.time = time;
+//    }
 
     public String toString(){
         return "name : "+ name +

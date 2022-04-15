@@ -1,11 +1,8 @@
 package trading.trading.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import trading.trading.domain.Stock;
 import trading.trading.repository.StockRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,9 +19,9 @@ public class StockService {
     /*
         주식 종목 데이터 저장
     */
-    public Stock save(Stock stock) {
+    public String save(Stock stock) {
         stockRepository.save(stock);
-        return stock;
+        return stock.getName();
     }
 
     /*
@@ -37,7 +34,7 @@ public class StockService {
     /*
         종목 데이터 조회
     */
-    public Optional<Stock> findOne(Long stockId) {
+    public Optional<Stock> findOne(String stockId) {
         return stockRepository.findById(stockId);
     }
 }
