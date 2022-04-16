@@ -50,6 +50,14 @@ public class StockController {
                 String time = e.text().split(" ")[7];
 
                 Stock stock = new Stock();
+                stock.setName(name);
+                stock.setLast(last);
+                stock.setHigh(high);
+                stock.setLow(low);
+                stock.setPc(pc);
+                stock.setPcp(pcp);
+                stock.setTurnover(turnover);
+                stock.setTime(time);
                 repository.save(stock);
             }
         } catch (IOException e) {
