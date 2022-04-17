@@ -59,6 +59,9 @@ public class StockController {
                 stock.setTurnover(turnover);
                 stock.setTime(time);
                 repository.save(stock);
+
+
+
             }
         } catch (IOException e) {
             // TODO Auto-generated catch block
