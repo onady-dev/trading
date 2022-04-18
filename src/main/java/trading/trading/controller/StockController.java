@@ -33,7 +33,7 @@ public class StockController {
 
     @PostMapping("/stocks/new")
     public String create(){
-        MemoryStockRepository repository = new MemoryStockRepository();
+
         String URL = "https://kr.investing.com/equities/south-korea";
         Document doc;
         try {
@@ -58,10 +58,7 @@ public class StockController {
                 stock.setPcp(pcp);
                 stock.setTurnover(turnover);
                 stock.setTime(time);
-                repository.save(stock);
-
-
-
+                stockService.save(stock);
             }
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -73,6 +70,7 @@ public class StockController {
     @GetMapping("/stocks")
     public String list(Model model){
         List<Stock> stocks = stockService.findStocks();
+        System.out.println(stocks);
         model.addAttribute("stocks", stocks);
         return "stocks/stockList";
     }

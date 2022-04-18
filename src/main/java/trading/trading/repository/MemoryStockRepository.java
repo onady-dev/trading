@@ -1,8 +1,10 @@
 package trading.trading.repository;
 
+import org.springframework.stereotype.Repository;
 import trading.trading.domain.Stock;
 
 import java.util.*;
+
 
 public class MemoryStockRepository implements StockRepository {
 
@@ -17,7 +19,7 @@ public class MemoryStockRepository implements StockRepository {
     }
 
     @Override
-    public Optional<Stock> findById(String id) {
+    public Optional<Stock> findById(Long id) {
         return Optional.ofNullable(store.get(id));
     }
 

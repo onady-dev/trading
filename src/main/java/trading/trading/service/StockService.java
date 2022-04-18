@@ -1,17 +1,18 @@
 package trading.trading.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import trading.trading.domain.Stock;
 import trading.trading.repository.StockRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-//@Service
+
 public class StockService {
     // 테스트파일 생성 단축키 커맨드+쉬프트+n
     private final StockRepository stockRepository;
 
-//    @Autowired
     public StockService(StockRepository stockRepository) {
         this.stockRepository = stockRepository;
     }
@@ -34,7 +35,7 @@ public class StockService {
     /*
         종목 데이터 조회
     */
-    public Optional<Stock> findOne(String stockId) {
+    public Optional<Stock> findOne(Long stockId) {
         return stockRepository.findById(stockId);
     }
 }
